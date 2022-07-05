@@ -1,1 +1,26 @@
-Home Page / List Page
+{{ define "main" }}
+<main class="site-main">
+    <section class="post-list">
+        {{ range .Paginator.Pages }}
+            <article>
+                <h2>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+                <div class="infos">
+                    <div class="author">Posted By : {{ .Params.author }} </div>
+                    <time>{{dateFormat .Site.Params.dateFormat .Date}}</time>
+                    <div class="content">
+                        {{ .Content }}
+                    </div>
+                </div>
+                <div class="post-tags">
+                    {{ range (.GetTerms "tags")}}
+                    <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+                    {{ end }}
+                </div>
+            </article>
+        {{ end }}
+    </section>
+</main>
+
+{{ end }}
