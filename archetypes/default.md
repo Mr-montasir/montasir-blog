@@ -4,5 +4,6 @@ date = {{ .Date }}
 draft = false
 author = "montasir"
 tags = []
+type = post
 +++
 
