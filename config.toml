@@ -1,6 +1,6 @@
 baseURL = 'https://inquisitive-queijadas-df71a2.netlify.app/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'montasir blog'
 
 [params]
 dateFormat = "02/01/2006"
